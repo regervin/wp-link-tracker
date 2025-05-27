@@ -231,6 +231,7 @@ class WP_Link_Tracker_Stats {
         if (empty($devices['device_types'])) {
             $html .= '<p>' . __('No device data available.', 'wp-link-tracker') . '</p>';
         } else {
+            $html .= '<div style="max-height: 300px; overflow-y: auto;">';
             $html .= '<table class="widefat striped">';
             $html .= '<thead><tr>';
             $html .= '<th>' . __('Device', 'wp-link-tracker') . '</th>';
@@ -246,6 +247,7 @@ class WP_Link_Tracker_Stats {
             }
             
             $html .= '</tbody></table>';
+            $html .= '</div>';
         }
         
         $html .= '</div>';
@@ -257,6 +259,7 @@ class WP_Link_Tracker_Stats {
         if (empty($devices['browsers'])) {
             $html .= '<p>' . __('No browser data available.', 'wp-link-tracker') . '</p>';
         } else {
+            $html .= '<div style="max-height: 300px; overflow-y: auto;">';
             $html .= '<table class="widefat striped">';
             $html .= '<thead><tr>';
             $html .= '<th>' . __('Browser', 'wp-link-tracker') . '</th>';
@@ -272,6 +275,7 @@ class WP_Link_Tracker_Stats {
             }
             
             $html .= '</tbody></table>';
+            $html .= '</div>';
         }
         
         $html .= '</div>';
@@ -283,6 +287,7 @@ class WP_Link_Tracker_Stats {
         if (empty($devices['operating_systems'])) {
             $html .= '<p>' . __('No OS data available.', 'wp-link-tracker') . '</p>';
         } else {
+            $html .= '<div style="max-height: 300px; overflow-y: auto;">';
             $html .= '<table class="widefat striped">';
             $html .= '<thead><tr>';
             $html .= '<th>' . __('OS', 'wp-link-tracker') . '</th>';
@@ -298,6 +303,7 @@ class WP_Link_Tracker_Stats {
             }
             
             $html .= '</tbody></table>';
+            $html .= '</div>';
         }
         
         $html .= '</div>';

@@ -111,6 +111,27 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
+/* Set fixed height for clicks chart container and add scrolling if needed */
+.wplinktracker-chart-container canvas#wplinktracker-clicks-chart {
+    max-height: 300px;
+}
+
+/* Set fixed height for device charts and add scrolling if needed */
+.wplinktracker-dashboard-devices .wplinktracker-chart-container {
+    height: 350px;
+    overflow: hidden;
+}
+
+.wplinktracker-dashboard-devices .wplinktracker-chart-container canvas {
+    max-height: 300px;
+}
+
+/* Set fixed height for table containers and add scrolling */
+.wplinktracker-table-container > div {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
 .wplinktracker-chart-container:last-child,
 .wplinktracker-table-container:last-child {
     margin-right: 0;

@@ -251,21 +251,23 @@ class WP_Link_Tracker_Admin {
                 <div class="wplinktracker-dashboard-charts">
                     <div class="wplinktracker-chart-container">
                         <h3><?php _e('Clicks Over Time', 'wp-link-tracker'); ?></h3>
-                        <canvas id="wplinktracker-clicks-chart"></canvas>
+                        <div style="height: 300px; overflow: hidden;">
+                            <canvas id="wplinktracker-clicks-chart"></canvas>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="wplinktracker-dashboard-tables">
                     <div class="wplinktracker-table-container">
                         <h3><?php _e('Top Performing Links', 'wp-link-tracker'); ?></h3>
-                        <div id="wplinktracker-top-links-table">
+                        <div id="wplinktracker-top-links-table" class="wplinktracker-table-content">
                             <p><?php _e('Loading data...', 'wp-link-tracker'); ?></p>
                         </div>
                     </div>
                     
                     <div class="wplinktracker-table-container">
                         <h3><?php _e('Top Referrers', 'wp-link-tracker'); ?></h3>
-                        <div id="wplinktracker-top-referrers-table">
+                        <div id="wplinktracker-top-referrers-table" class="wplinktracker-table-content">
                             <p><?php _e('Loading data...', 'wp-link-tracker'); ?></p>
                         </div>
                     </div>
@@ -274,17 +276,23 @@ class WP_Link_Tracker_Admin {
                 <div class="wplinktracker-dashboard-devices">
                     <div class="wplinktracker-chart-container">
                         <h3><?php _e('Device Types', 'wp-link-tracker'); ?></h3>
-                        <canvas id="wplinktracker-devices-chart"></canvas>
+                        <div style="height: 300px; overflow: hidden;">
+                            <canvas id="wplinktracker-devices-chart"></canvas>
+                        </div>
                     </div>
                     
                     <div class="wplinktracker-chart-container">
                         <h3><?php _e('Browsers', 'wp-link-tracker'); ?></h3>
-                        <canvas id="wplinktracker-browsers-chart"></canvas>
+                        <div style="height: 300px; overflow: hidden;">
+                            <canvas id="wplinktracker-browsers-chart"></canvas>
+                        </div>
                     </div>
                     
                     <div class="wplinktracker-chart-container">
                         <h3><?php _e('Operating Systems', 'wp-link-tracker'); ?></h3>
-                        <canvas id="wplinktracker-os-chart"></canvas>
+                        <div style="height: 300px; overflow: hidden;">
+                            <canvas id="wplinktracker-os-chart"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -353,6 +361,11 @@ class WP_Link_Tracker_Admin {
             }
             #wplinktracker-custom-date-range {
                 margin-top: 10px;
+            }
+            /* Table content scrolling */
+            .wplinktracker-table-content {
+                max-height: 300px;
+                overflow-y: auto;
             }
             @media (max-width: 782px) {
                 .wplinktracker-dashboard-summary,
